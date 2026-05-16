@@ -1,8 +1,8 @@
 class ProTerminalSetup < Formula
   desc "Portable Ghostty/zsh terminal setup with Kubernetes and tmux helpers"
   homepage "https://github.com/mathewjustin/pro-terminal-setup"
-  url "https://github.com/mathewjustin/pro-terminal-setup/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "8c14474b7e3291e97f4290d4fd64126ea49e93cb7240508d6e9ec9a925dbc222"
+  url "https://github.com/mathewjustin/pro-terminal-setup/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "0a64718f88061162e13263f2ba29d491b6bbb75d0a3032294e215683053e1069"
   license "MIT"
 
   depends_on "starship"
@@ -12,13 +12,18 @@ class ProTerminalSetup < Formula
   depends_on "fd"
   depends_on "ripgrep"
   depends_on "fzf"
+  depends_on "zsh"
   depends_on "kubectl"
   depends_on "k9s"
   depends_on "tmux"
 
   def install
     libexec.install Dir["*"]
-    bin.install_symlink libexec/"bin/pro-terminal-setup"
+    (bin/"pro-terminal-setup").write <<~EOS
+      #!/bin/sh
+      export PRO_TERMINAL_PREFIX="#{libexec}"
+      exec "#{libexec}/bin/pro-terminal-setup" "$@"
+    EOS
   end
 
   def caveats
