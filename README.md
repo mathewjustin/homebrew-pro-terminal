@@ -5,7 +5,7 @@ Homebrew tap for `pro-terminal-setup`.
 ## Install
 
 ```sh
-brew tap justin/pro-terminal
+brew tap mathewjustin/pro-terminal
 brew install pro-terminal-setup
 pro-terminal-setup install
 ```
@@ -42,8 +42,8 @@ Create a source repo named `pro-terminal-setup` containing the files from
 Then update `Formula/pro-terminal-setup.rb`:
 
 ```ruby
-homepage "https://github.com/<user>/pro-terminal-setup"
-url "https://github.com/<user>/pro-terminal-setup/archive/refs/tags/v0.1.0.tar.gz"
+homepage "https://github.com/mathewjustin/pro-terminal-setup"
+url "https://github.com/mathewjustin/pro-terminal-setup/archive/refs/tags/v0.1.0.tar.gz"
 ```
 
 Recompute checksum after the final archive is published:

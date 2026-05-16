@@ -1,7 +1,7 @@
 class ProTerminalSetup < Formula
   desc "Portable Ghostty/zsh terminal setup with Kubernetes and tmux helpers"
-  homepage "https://github.com/justin/homebrew-pro-terminal"
-  url "https://github.com/justin/pro-terminal-setup/archive/refs/tags/v0.1.0.tar.gz"
+  homepage "https://github.com/mathewjustin/pro-terminal-setup"
+  url "https://github.com/mathewjustin/pro-terminal-setup/archive/refs/tags/v0.1.0.tar.gz"
   sha256 "a5a24cee7a0bf40137d8899ed007eca8d650869b9af558a0d81428c614aac4df"
   license "MIT"
 
