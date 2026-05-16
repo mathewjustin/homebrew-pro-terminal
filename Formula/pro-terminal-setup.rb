@@ -1,8 +1,8 @@
 class ProTerminalSetup < Formula
   desc "Portable Ghostty/zsh terminal setup with Kubernetes and tmux helpers"
   homepage "https://github.com/mathewjustin/pro-terminal-setup"
-  url "https://github.com/mathewjustin/pro-terminal-setup/archive/refs/tags/v0.3.0.tar.gz"
-  sha256 "c1445abbbef64e75f5c9c39d7a3422b9936ebeabbf2e7e97531fc6ad4347d3f1"
+  url "https://github.com/mathewjustin/pro-terminal-setup/archive/refs/tags/v0.3.1.tar.gz"
+  sha256 "b3b5a83591a488bcc59485dc693d3450bc4887de0a997cecedac7c89c505cd5c"
   license "MIT"
 
   depends_on "starship"
@@ -12,6 +12,8 @@ class ProTerminalSetup < Formula
   depends_on "fd"
   depends_on "ripgrep"
   depends_on "fzf"
+  depends_on "jq"
+  depends_on "yq"
   depends_on "zsh"
   depends_on "kubectl"
   depends_on "k9s"
