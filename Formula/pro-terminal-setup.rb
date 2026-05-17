@@ -1,8 +1,8 @@
 class ProTerminalSetup < Formula
   desc "Portable Ghostty/zsh terminal setup with Kubernetes and tmux helpers"
   homepage "https://github.com/mathewjustin/pro-terminal-setup"
-  url "https://github.com/mathewjustin/pro-terminal-setup/archive/refs/tags/v0.3.1.tar.gz"
-  sha256 "b3b5a83591a488bcc59485dc693d3450bc4887de0a997cecedac7c89c505cd5c"
+  url "https://github.com/mathewjustin/pro-terminal-setup/archive/refs/tags/v0.3.2.tar.gz"
+  sha256 "482edecad6e1a7d962fb93061c0014b022c9516f42ae6e4622475d3fca79933a"
   license "MIT"
 
   depends_on "starship"
@@ -18,6 +18,7 @@ class ProTerminalSetup < Formula
   depends_on "kubectl"
   depends_on "k9s"
   depends_on "tmux"
+  depends_on "lazygit"
 
   def install
     libexec.install Dir["*"]
